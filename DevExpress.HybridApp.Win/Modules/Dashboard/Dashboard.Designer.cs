@@ -23,14 +23,11 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraCharts.SimpleDiagram simpleDiagram1 = new DevExpress.XtraCharts.SimpleDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.FunnelSeriesLabel funnelSeriesLabel1 = new DevExpress.XtraCharts.FunnelSeriesLabel();
             DevExpress.XtraCharts.FunnelSeriesView funnelSeriesView1 = new DevExpress.XtraCharts.FunnelSeriesView();
             DevExpress.XtraCharts.FunnelSeriesView funnelSeriesView2 = new DevExpress.XtraCharts.FunnelSeriesView();
-            DevExpress.XtraCharts.SimpleDiagram simpleDiagram2 = new DevExpress.XtraCharts.SimpleDiagram();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.DoughnutSeriesLabel doughnutSeriesLabel1 = new DevExpress.XtraCharts.DoughnutSeriesLabel();
             DevExpress.XtraCharts.DoughnutSeriesView doughnutSeriesView1 = new DevExpress.XtraCharts.DoughnutSeriesView();
@@ -47,7 +44,7 @@
             this.totalGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.discountGridColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.salesGridControl = new DevExpress.XtraGrid.GridControl();
-            this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salesBindingSource = new System.Windows.Forms.BindingSource();
             this.salesGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colInvoiceNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomer = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -118,7 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.opportunitiesChartControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(funnelSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(funnelSeriesView1)).BeginInit();
@@ -128,7 +124,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opportunitiesLabelLCI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revenuesChartControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).BeginInit();
@@ -176,6 +171,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // orderItemsGridView
+            // 
             this.orderItemsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ProductGC,
             this.unitsGridColumn,
@@ -190,12 +188,18 @@
             this.orderItemsGridView.OptionsView.ShowGroupPanel = false;
             this.orderItemsGridView.OptionsView.ShowIndicator = false;
             this.orderItemsGridView.PreviewFieldName = "OrderItems";
+            // 
+            // ProductGC
+            // 
             this.ProductGC.Caption = "Product";
             this.ProductGC.FieldName = "Product.Name";
             this.ProductGC.Name = "ProductGC";
             this.ProductGC.Visible = true;
             this.ProductGC.VisibleIndex = 0;
             this.ProductGC.Width = 159;
+            // 
+            // unitsGridColumn
+            // 
             this.unitsGridColumn.Caption = "Units";
             this.unitsGridColumn.FieldName = "ProductUnits";
             this.unitsGridColumn.Name = "unitsGridColumn";
@@ -203,6 +207,9 @@
             this.unitsGridColumn.Visible = true;
             this.unitsGridColumn.VisibleIndex = 1;
             this.unitsGridColumn.Width = 120;
+            // 
+            // unitPriceGridColumn
+            // 
             this.unitPriceGridColumn.Caption = "Unit Price";
             this.unitPriceGridColumn.DisplayFormat.FormatString = "c";
             this.unitPriceGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -212,6 +219,9 @@
             this.unitPriceGridColumn.Visible = true;
             this.unitPriceGridColumn.VisibleIndex = 2;
             this.unitPriceGridColumn.Width = 120;
+            // 
+            // totalGridColumn
+            // 
             this.totalGridColumn.Caption = "Total";
             this.totalGridColumn.DisplayFormat.FormatString = "c";
             this.totalGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -221,6 +231,9 @@
             this.totalGridColumn.Visible = true;
             this.totalGridColumn.VisibleIndex = 3;
             this.totalGridColumn.Width = 120;
+            // 
+            // discountGridColumn
+            // 
             this.discountGridColumn.Caption = "Discount";
             this.discountGridColumn.DisplayFormat.FormatString = "c";
             this.discountGridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -230,6 +243,9 @@
             this.discountGridColumn.Visible = true;
             this.discountGridColumn.VisibleIndex = 4;
             this.discountGridColumn.Width = 120;
+            // 
+            // salesGridControl
+            // 
             this.salesGridControl.DataSource = this.salesBindingSource;
             gridLevelNode1.LevelTemplate = this.orderItemsGridView;
             gridLevelNode1.RelationName = "OrderItems";
@@ -246,7 +262,13 @@
             this.salesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.salesGridView,
             this.orderItemsGridView});
+            // 
+            // salesBindingSource
+            // 
             this.salesBindingSource.DataSource = typeof(DevExpress.DevAV.Order);
+            // 
+            // salesGridView
+            // 
             this.salesGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colInvoiceNumber,
             this.colCustomer,
@@ -267,6 +289,9 @@
             this.salesGridView.RowHeight = 10;
             this.salesGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colInvoiceNumber, DevExpress.Data.ColumnSortOrder.Descending)});
+            // 
+            // colInvoiceNumber
+            // 
             this.colInvoiceNumber.Caption = "Invoice";
             this.colInvoiceNumber.FieldName = "InvoiceNumber";
             this.colInvoiceNumber.Name = "colInvoiceNumber";
@@ -274,24 +299,36 @@
             this.colInvoiceNumber.Visible = true;
             this.colInvoiceNumber.VisibleIndex = 0;
             this.colInvoiceNumber.Width = 120;
+            // 
+            // colCustomer
+            // 
             this.colCustomer.Caption = "Company";
             this.colCustomer.FieldName = "Store.CustomerName";
             this.colCustomer.Name = "colCustomer";
             this.colCustomer.Visible = true;
             this.colCustomer.VisibleIndex = 2;
             this.colCustomer.Width = 117;
+            // 
+            // colStore
+            // 
             this.colStore.Caption = "Store";
             this.colStore.FieldName = "Store.Address.City";
             this.colStore.Name = "colStore";
             this.colStore.Visible = true;
             this.colStore.VisibleIndex = 3;
             this.colStore.Width = 112;
+            // 
+            // colOrderDate
+            // 
             this.colOrderDate.FieldName = "OrderDate";
             this.colOrderDate.Name = "colOrderDate";
             this.colOrderDate.OptionsColumn.FixedWidth = true;
             this.colOrderDate.Visible = true;
             this.colOrderDate.VisibleIndex = 1;
             this.colOrderDate.Width = 100;
+            // 
+            // colTotalAmount
+            // 
             this.colTotalAmount.DisplayFormat.FormatString = "c";
             this.colTotalAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colTotalAmount.FieldName = "TotalAmount";
@@ -300,9 +337,15 @@
             this.colTotalAmount.Visible = true;
             this.colTotalAmount.VisibleIndex = 4;
             this.colTotalAmount.Width = 129;
+            // 
+            // repositoryItemProgressBar1
+            // 
             this.repositoryItemProgressBar1.Name = "repositoryItemProgressBar1";
             this.repositoryItemProgressBar1.ProgressViewStyle = DevExpress.XtraEditors.Controls.ProgressViewStyle.Solid;
             this.repositoryItemProgressBar1.ShowTitle = true;
+            // 
+            // repositoryItemComboBox1
+            // 
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
@@ -312,6 +355,9 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("", DevExpress.DevAV.EmployeeTaskPriority.Urgent, 1)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.PopupSizeable = true;
+            // 
+            // pictureBox1
+            // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -320,6 +366,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // dataLayoutControl1
+            // 
             this.dataLayoutControl1.AllowCustomization = false;
             this.dataLayoutControl1.Controls.Add(this.opportunitiesChartControl);
             this.dataLayoutControl1.Controls.Add(this.opportunitiesLayoutControl);
@@ -337,11 +386,12 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(1166, 617);
             this.dataLayoutControl1.TabIndex = 1;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
+            // 
+            // opportunitiesChartControl
+            // 
             this.opportunitiesChartControl.AccessibleName = "";
             this.opportunitiesChartControl.AllowDrop = true;
             this.opportunitiesChartControl.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            simpleDiagram1.EqualPieSize = false;
-            this.opportunitiesChartControl.Diagram = simpleDiagram1;
             this.opportunitiesChartControl.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.opportunitiesChartControl.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside;
             this.opportunitiesChartControl.Legend.Antialiasing = true;
@@ -384,6 +434,9 @@
             this.opportunitiesChartControl.Size = new System.Drawing.Size(351, 519);
             this.opportunitiesChartControl.TabIndex = 6;
             this.opportunitiesChartControl.CustomDrawSeriesPoint += new DevExpress.XtraCharts.CustomDrawSeriesPointEventHandler(this.opportunitiesChartControl_CustomDrawSeriesPoint);
+            // 
+            // opportunitiesLayoutControl
+            // 
             this.opportunitiesLayoutControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.opportunitiesLayoutControl.Controls.Add(this.opportunitiesLabelControl);
             this.opportunitiesLayoutControl.Location = new System.Drawing.Point(794, 21);
@@ -393,13 +446,19 @@
             this.opportunitiesLayoutControl.Size = new System.Drawing.Size(351, 56);
             this.opportunitiesLayoutControl.TabIndex = 21;
             this.opportunitiesLayoutControl.Text = "layoutControl2";
+            // 
+            // opportunitiesLabelControl
+            // 
             this.opportunitiesLabelControl.Appearance.ForeColor = System.Drawing.Color.Black;
             this.opportunitiesLabelControl.Location = new System.Drawing.Point(10, 2);
             this.opportunitiesLabelControl.Name = "opportunitiesLabelControl";
             this.opportunitiesLabelControl.Size = new System.Drawing.Size(339, 52);
             this.opportunitiesLabelControl.StyleController = this.opportunitiesLayoutControl;
             this.opportunitiesLabelControl.TabIndex = 19;
-            this.opportunitiesLabelControl.Text = "OPPORTUNITIES";
+            this.opportunitiesLabelControl.Text = "CALENDAR";
+            // 
+            // layoutControlGroup4
+            // 
             this.layoutControlGroup4.CustomizationFormText = "Root";
             this.layoutControlGroup4.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup4.GroupBordersVisible = false;
@@ -410,6 +469,9 @@
             this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup4.Size = new System.Drawing.Size(351, 56);
             this.layoutControlGroup4.TextVisible = false;
+            // 
+            // opportunitiesLabelLCI
+            // 
             this.opportunitiesLabelLCI.Control = this.opportunitiesLabelControl;
             this.opportunitiesLabelLCI.CustomizationFormText = "layoutControlItem4";
             this.opportunitiesLabelLCI.Location = new System.Drawing.Point(0, 0);
@@ -421,9 +483,10 @@
             this.opportunitiesLabelLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.opportunitiesLabelLCI.TextSize = new System.Drawing.Size(0, 0);
             this.opportunitiesLabelLCI.TextVisible = false;
+            // 
+            // revenuesChartControl
+            // 
             this.revenuesChartControl.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            simpleDiagram2.EqualPieSize = false;
-            this.revenuesChartControl.Diagram = simpleDiagram2;
             this.revenuesChartControl.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.Center;
             this.revenuesChartControl.Legend.Antialiasing = true;
             this.revenuesChartControl.Legend.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -454,18 +517,17 @@
             series2.LegendTextPattern = "{A} {V:c}";
             series2.Name = "Series 1";
             doughnutSeriesView1.HoleRadiusPercent = 56;
-            doughnutSeriesView1.RuntimeExploding = false;
-            doughnutSeriesView1.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Counterclockwise;
             series2.View = doughnutSeriesView1;
             this.revenuesChartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series2};
-            doughnutSeriesView2.RuntimeExploding = false;
-            doughnutSeriesView2.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Counterclockwise;
             this.revenuesChartControl.SeriesTemplate.View = doughnutSeriesView2;
             this.revenuesChartControl.Size = new System.Drawing.Size(367, 140);
             this.revenuesChartControl.SmallChartText.Text = "Increase the chart\'s size,\r\nto view its layout.\r\n";
             this.revenuesChartControl.TabIndex = 5;
             this.revenuesChartControl.CustomDrawSeriesPoint += new DevExpress.XtraCharts.CustomDrawSeriesPointEventHandler(this.revenuesChartControl_CustomDrawSeriesPoint);
+            // 
+            // costLayoutControl
+            // 
             this.costLayoutControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.costLayoutControl.Controls.Add(this.todayCostSimpleButton);
             this.costLayoutControl.Controls.Add(this.yearCostSimpleButton);
@@ -478,40 +540,55 @@
             this.costLayoutControl.Size = new System.Drawing.Size(378, 56);
             this.costLayoutControl.TabIndex = 24;
             this.costLayoutControl.Text = "layoutControl3";
+            // 
+            // todayCostSimpleButton
+            // 
             this.todayCostSimpleButton.GroupIndex = 2;
-            this.todayCostSimpleButton.Location = new System.Drawing.Point(153, 15);
+            this.todayCostSimpleButton.Location = new System.Drawing.Point(96, 2);
             this.todayCostSimpleButton.Name = "todayCostSimpleButton";
-            this.todayCostSimpleButton.Size = new System.Drawing.Size(57, 25);
+            this.todayCostSimpleButton.Size = new System.Drawing.Size(88, 42);
             this.todayCostSimpleButton.StyleController = this.costLayoutControl;
             this.todayCostSimpleButton.TabIndex = 8;
             this.todayCostSimpleButton.TabStop = false;
             this.todayCostSimpleButton.Text = "Today";
             this.todayCostSimpleButton.Click += new System.EventHandler(this.todayCostSimpleButton_Click);
+            // 
+            // yearCostSimpleButton
+            // 
             this.yearCostSimpleButton.Checked = true;
             this.yearCostSimpleButton.GroupIndex = 2;
-            this.yearCostSimpleButton.Location = new System.Drawing.Point(309, 15);
+            this.yearCostSimpleButton.Location = new System.Drawing.Point(312, 2);
             this.yearCostSimpleButton.Name = "yearCostSimpleButton";
-            this.yearCostSimpleButton.Size = new System.Drawing.Size(44, 25);
+            this.yearCostSimpleButton.Size = new System.Drawing.Size(74, 42);
             this.yearCostSimpleButton.StyleController = this.costLayoutControl;
             this.yearCostSimpleButton.TabIndex = 8;
             this.yearCostSimpleButton.Text = "YTD";
             this.yearCostSimpleButton.Click += new System.EventHandler(this.yearCostSimpleButton_Click);
+            // 
+            // monthCostSimpleButton
+            // 
             this.monthCostSimpleButton.GroupIndex = 2;
-            this.monthCostSimpleButton.Location = new System.Drawing.Point(214, 15);
+            this.monthCostSimpleButton.Location = new System.Drawing.Point(188, 2);
             this.monthCostSimpleButton.Name = "monthCostSimpleButton";
-            this.monthCostSimpleButton.Size = new System.Drawing.Size(91, 25);
+            this.monthCostSimpleButton.Size = new System.Drawing.Size(120, 42);
             this.monthCostSimpleButton.StyleController = this.costLayoutControl;
             this.monthCostSimpleButton.TabIndex = 8;
             this.monthCostSimpleButton.TabStop = false;
             this.monthCostSimpleButton.Text = "This Month";
             this.monthCostSimpleButton.Click += new System.EventHandler(this.monthCostSimpleButton_Click);
+            // 
+            // costLabelControl
+            // 
             this.costLabelControl.Appearance.ForeColor = System.Drawing.Color.Black;
             this.costLabelControl.Location = new System.Drawing.Point(10, 2);
             this.costLabelControl.Name = "costLabelControl";
-            this.costLabelControl.Size = new System.Drawing.Size(139, 52);
+            this.costLabelControl.Size = new System.Drawing.Size(82, 42);
             this.costLabelControl.StyleController = this.costLayoutControl;
             this.costLabelControl.TabIndex = 4;
             this.costLabelControl.Text = "COST OF GOODS SOLD";
+            // 
+            // layoutControlGroup3
+            // 
             this.layoutControlGroup3.CustomizationFormText = "layoutControlGroup3";
             this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup3.GroupBordersVisible = false;
@@ -523,49 +600,64 @@
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(378, 56);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(411, 46);
             this.layoutControlGroup3.TextVisible = false;
+            // 
+            // costLabelControlLCI
+            // 
             this.costLabelControlLCI.Control = this.costLabelControl;
             this.costLabelControlLCI.CustomizationFormText = "costLabelControlLCI";
             this.costLabelControlLCI.Location = new System.Drawing.Point(0, 0);
             this.costLabelControlLCI.MinSize = new System.Drawing.Size(94, 24);
             this.costLabelControlLCI.Name = "costLabelControlLCI";
             this.costLabelControlLCI.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 2, 2, 2);
-            this.costLabelControlLCI.Size = new System.Drawing.Size(151, 56);
+            this.costLabelControlLCI.Size = new System.Drawing.Size(94, 46);
             this.costLabelControlLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.costLabelControlLCI.TextSize = new System.Drawing.Size(0, 0);
             this.costLabelControlLCI.TextVisible = false;
+            // 
+            // monthCostSimpleButtonLCI
+            // 
             this.monthCostSimpleButtonLCI.Control = this.monthCostSimpleButton;
             this.monthCostSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.monthCostSimpleButtonLCI.CustomizationFormText = "monthCostSimpleButtonLCI";
-            this.monthCostSimpleButtonLCI.Location = new System.Drawing.Point(212, 0);
+            this.monthCostSimpleButtonLCI.Location = new System.Drawing.Point(186, 0);
             this.monthCostSimpleButtonLCI.Name = "monthCostSimpleButtonLCI";
             this.monthCostSimpleButtonLCI.OptionsPrint.AllowPrint = false;
-            this.monthCostSimpleButtonLCI.Size = new System.Drawing.Size(95, 56);
+            this.monthCostSimpleButtonLCI.Size = new System.Drawing.Size(124, 46);
             this.monthCostSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.monthCostSimpleButtonLCI.TextVisible = false;
             this.monthCostSimpleButtonLCI.TrimClientAreaToControl = false;
+            // 
+            // yearCostSimpleButtonLCI
+            // 
             this.yearCostSimpleButtonLCI.Control = this.yearCostSimpleButton;
             this.yearCostSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.yearCostSimpleButtonLCI.CustomizationFormText = "yearCostSimpleButtonLCI";
-            this.yearCostSimpleButtonLCI.Location = new System.Drawing.Point(307, 0);
+            this.yearCostSimpleButtonLCI.Location = new System.Drawing.Point(310, 0);
             this.yearCostSimpleButtonLCI.Name = "yearCostSimpleButtonLCI";
             this.yearCostSimpleButtonLCI.OptionsPrint.AllowPrint = false;
             this.yearCostSimpleButtonLCI.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 25, 2, 2);
-            this.yearCostSimpleButtonLCI.Size = new System.Drawing.Size(71, 56);
+            this.yearCostSimpleButtonLCI.Size = new System.Drawing.Size(101, 46);
             this.yearCostSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.yearCostSimpleButtonLCI.TextVisible = false;
             this.yearCostSimpleButtonLCI.TrimClientAreaToControl = false;
+            // 
+            // todayCostSimpleButtonLCI
+            // 
             this.todayCostSimpleButtonLCI.Control = this.todayCostSimpleButton;
             this.todayCostSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.todayCostSimpleButtonLCI.CustomizationFormText = "todayCostSimpleButtonLCI";
-            this.todayCostSimpleButtonLCI.Location = new System.Drawing.Point(151, 0);
+            this.todayCostSimpleButtonLCI.Location = new System.Drawing.Point(94, 0);
             this.todayCostSimpleButtonLCI.Name = "todayCostSimpleButtonLCI";
             this.todayCostSimpleButtonLCI.OptionsPrint.AllowPrint = false;
-            this.todayCostSimpleButtonLCI.Size = new System.Drawing.Size(61, 56);
+            this.todayCostSimpleButtonLCI.Size = new System.Drawing.Size(92, 46);
             this.todayCostSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.todayCostSimpleButtonLCI.TextVisible = false;
             this.todayCostSimpleButtonLCI.TrimClientAreaToControl = false;
+            // 
+            // revenuesLayoutControl
+            // 
             this.revenuesLayoutControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.revenuesLayoutControl.Controls.Add(this.yearRevenuesSimpleButton);
             this.revenuesLayoutControl.Controls.Add(this.monthRevenuesSimpleButton);
@@ -578,40 +670,55 @@
             this.revenuesLayoutControl.Size = new System.Drawing.Size(371, 56);
             this.revenuesLayoutControl.TabIndex = 23;
             this.revenuesLayoutControl.Text = "layoutControl2";
+            // 
+            // yearRevenuesSimpleButton
+            // 
             this.yearRevenuesSimpleButton.Checked = true;
             this.yearRevenuesSimpleButton.GroupIndex = 1;
-            this.yearRevenuesSimpleButton.Location = new System.Drawing.Point(308, 15);
+            this.yearRevenuesSimpleButton.Location = new System.Drawing.Point(312, 2);
             this.yearRevenuesSimpleButton.Name = "yearRevenuesSimpleButton";
-            this.yearRevenuesSimpleButton.Size = new System.Drawing.Size(38, 25);
+            this.yearRevenuesSimpleButton.Size = new System.Drawing.Size(74, 42);
             this.yearRevenuesSimpleButton.StyleController = this.revenuesLayoutControl;
             this.yearRevenuesSimpleButton.TabIndex = 7;
             this.yearRevenuesSimpleButton.Text = "YTD";
             this.yearRevenuesSimpleButton.Click += new System.EventHandler(this.yearRevenuesSimpleButton_Click);
+            // 
+            // monthRevenuesSimpleButton
+            // 
             this.monthRevenuesSimpleButton.GroupIndex = 1;
-            this.monthRevenuesSimpleButton.Location = new System.Drawing.Point(220, 15);
+            this.monthRevenuesSimpleButton.Location = new System.Drawing.Point(188, 2);
             this.monthRevenuesSimpleButton.Name = "monthRevenuesSimpleButton";
-            this.monthRevenuesSimpleButton.Size = new System.Drawing.Size(84, 25);
+            this.monthRevenuesSimpleButton.Size = new System.Drawing.Size(120, 42);
             this.monthRevenuesSimpleButton.StyleController = this.revenuesLayoutControl;
             this.monthRevenuesSimpleButton.TabIndex = 6;
             this.monthRevenuesSimpleButton.TabStop = false;
             this.monthRevenuesSimpleButton.Text = "This Month";
             this.monthRevenuesSimpleButton.Click += new System.EventHandler(this.monthRevenuesSimpleButton_Click);
+            // 
+            // todayRevenuesSimpleButton
+            // 
             this.todayRevenuesSimpleButton.GroupIndex = 1;
-            this.todayRevenuesSimpleButton.Location = new System.Drawing.Point(164, 15);
+            this.todayRevenuesSimpleButton.Location = new System.Drawing.Point(96, 2);
             this.todayRevenuesSimpleButton.Name = "todayRevenuesSimpleButton";
-            this.todayRevenuesSimpleButton.Size = new System.Drawing.Size(52, 25);
+            this.todayRevenuesSimpleButton.Size = new System.Drawing.Size(88, 42);
             this.todayRevenuesSimpleButton.StyleController = this.revenuesLayoutControl;
             this.todayRevenuesSimpleButton.TabIndex = 5;
             this.todayRevenuesSimpleButton.TabStop = false;
             this.todayRevenuesSimpleButton.Text = "Today";
             this.todayRevenuesSimpleButton.Click += new System.EventHandler(this.todayRevenuesSimpleButton_Click);
+            // 
+            // revenuesLabelControl
+            // 
             this.revenuesLabelControl.Appearance.ForeColor = System.Drawing.Color.Black;
             this.revenuesLabelControl.Location = new System.Drawing.Point(10, 2);
             this.revenuesLabelControl.Name = "revenuesLabelControl";
-            this.revenuesLabelControl.Size = new System.Drawing.Size(150, 52);
+            this.revenuesLabelControl.Size = new System.Drawing.Size(82, 42);
             this.revenuesLabelControl.StyleController = this.revenuesLayoutControl;
             this.revenuesLabelControl.TabIndex = 4;
             this.revenuesLabelControl.Text = "REVENUES";
+            // 
+            // layoutControlGroup2
+            // 
             this.layoutControlGroup2.CustomizationFormText = "layoutControlGroup2";
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
@@ -623,49 +730,64 @@
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(371, 56);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(411, 46);
             this.layoutControlGroup2.TextVisible = false;
+            // 
+            // revenuesLabelLCI
+            // 
             this.revenuesLabelLCI.Control = this.revenuesLabelControl;
             this.revenuesLabelLCI.CustomizationFormText = "revenuesLabelLCI";
             this.revenuesLabelLCI.Location = new System.Drawing.Point(0, 0);
             this.revenuesLabelLCI.MinSize = new System.Drawing.Size(94, 24);
             this.revenuesLabelLCI.Name = "revenuesLabelLCI";
             this.revenuesLabelLCI.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 2, 2, 2);
-            this.revenuesLabelLCI.Size = new System.Drawing.Size(162, 56);
+            this.revenuesLabelLCI.Size = new System.Drawing.Size(94, 46);
             this.revenuesLabelLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.revenuesLabelLCI.TextSize = new System.Drawing.Size(0, 0);
             this.revenuesLabelLCI.TextVisible = false;
+            // 
+            // todayRevenuesSimpleButtonLCI
+            // 
             this.todayRevenuesSimpleButtonLCI.Control = this.todayRevenuesSimpleButton;
             this.todayRevenuesSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.todayRevenuesSimpleButtonLCI.CustomizationFormText = "todayRevenuesSimpleButtonLCI";
-            this.todayRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(162, 0);
+            this.todayRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(94, 0);
             this.todayRevenuesSimpleButtonLCI.Name = "todayRevenuesSimpleButtonLCI";
             this.todayRevenuesSimpleButtonLCI.OptionsPrint.AllowPrint = false;
-            this.todayRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(56, 56);
+            this.todayRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(92, 46);
             this.todayRevenuesSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.todayRevenuesSimpleButtonLCI.TextVisible = false;
             this.todayRevenuesSimpleButtonLCI.TrimClientAreaToControl = false;
+            // 
+            // monthRevenuesSimpleButtonLCI
+            // 
             this.monthRevenuesSimpleButtonLCI.Control = this.monthRevenuesSimpleButton;
             this.monthRevenuesSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.monthRevenuesSimpleButtonLCI.CustomizationFormText = "monthRevenuesSimpleButtonLCI";
-            this.monthRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(218, 0);
+            this.monthRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(186, 0);
             this.monthRevenuesSimpleButtonLCI.Name = "monthRevenuesSimpleButtonLCI";
             this.monthRevenuesSimpleButtonLCI.OptionsPrint.AllowPrint = false;
-            this.monthRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(88, 56);
+            this.monthRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(124, 46);
             this.monthRevenuesSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.monthRevenuesSimpleButtonLCI.TextVisible = false;
             this.monthRevenuesSimpleButtonLCI.TrimClientAreaToControl = false;
+            // 
+            // yearRevenuesSimpleButtonLCI
+            // 
             this.yearRevenuesSimpleButtonLCI.Control = this.yearRevenuesSimpleButton;
             this.yearRevenuesSimpleButtonLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.yearRevenuesSimpleButtonLCI.CustomizationFormText = "yearRevenuesSimpleButtonLCI";
-            this.yearRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(306, 0);
+            this.yearRevenuesSimpleButtonLCI.Location = new System.Drawing.Point(310, 0);
             this.yearRevenuesSimpleButtonLCI.Name = "yearRevenuesSimpleButtonLCI";
             this.yearRevenuesSimpleButtonLCI.OptionsPrint.AllowPrint = false;
             this.yearRevenuesSimpleButtonLCI.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 25, 2, 2);
-            this.yearRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(65, 56);
+            this.yearRevenuesSimpleButtonLCI.Size = new System.Drawing.Size(101, 46);
             this.yearRevenuesSimpleButtonLCI.TextSize = new System.Drawing.Size(0, 0);
             this.yearRevenuesSimpleButtonLCI.TextVisible = false;
             this.yearRevenuesSimpleButtonLCI.TrimClientAreaToControl = false;
+            // 
+            // costChartControl
+            // 
             this.costChartControl.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Segoe UI", 8F);
             xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.False;
@@ -717,6 +839,9 @@
             this.costChartControl.Size = new System.Drawing.Size(378, 144);
             this.costChartControl.SmallChartText.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.costChartControl.TabIndex = 22;
+            // 
+            // salesLayoutControl
+            // 
             this.salesLayoutControl.AllowCustomization = false;
             this.salesLayoutControl.Appearance.DisabledLayoutGroupCaption.BackColor = System.Drawing.Color.Transparent;
             this.salesLayoutControl.Appearance.DisabledLayoutGroupCaption.Options.UseBackColor = true;
@@ -734,15 +859,21 @@
             this.salesLayoutControl.Size = new System.Drawing.Size(761, 363);
             this.salesLayoutControl.TabIndex = 20;
             this.salesLayoutControl.Text = "layoutControl1";
+            // 
+            // labelControl1
+            // 
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl1.Location = new System.Drawing.Point(8, 18);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(41, 20);
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "SALES";
+            // 
+            // searchControl
+            // 
             this.searchControl.Client = this.salesGridControl;
             this.searchControl.EditValue = "";
-            this.searchControl.Location = new System.Drawing.Point(451, 9);
+            this.searchControl.Location = new System.Drawing.Point(451, 7);
             this.searchControl.MaximumSize = new System.Drawing.Size(300, 38);
             this.searchControl.MinimumSize = new System.Drawing.Size(100, 20);
             this.searchControl.Name = "searchControl";
@@ -753,6 +884,9 @@
             this.searchControl.Properties.ShowClearButton = false;
             this.searchControl.Size = new System.Drawing.Size(300, 38);
             this.searchControl.TabIndex = 18;
+            // 
+            // Root
+            // 
             this.Root.CustomizationFormText = "Root";
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -764,6 +898,9 @@
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 0, 0, 0);
             this.Root.Size = new System.Drawing.Size(761, 363);
             this.Root.TextVisible = false;
+            // 
+            // searchControlLCI
+            // 
             this.searchControlLCI.Control = this.searchControl;
             this.searchControlLCI.ControlAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.searchControlLCI.CustomizationFormText = "searchControlLCI";
@@ -778,6 +915,9 @@
             this.searchControlLCI.TextSize = new System.Drawing.Size(0, 0);
             this.searchControlLCI.TextVisible = false;
             this.searchControlLCI.TrimClientAreaToControl = false;
+            // 
+            // layoutControlItem1
+            // 
             this.layoutControlItem1.Control = this.labelControl1;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
@@ -788,6 +928,9 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             this.layoutControlItem1.TrimClientAreaToControl = false;
+            // 
+            // layoutControlItem2
+            // 
             this.layoutControlItem2.Control = this.salesGridControl;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 57);
@@ -796,6 +939,9 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(761, 306);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
             this.layoutControlGroup1.AppearanceGroup.BackColor = System.Drawing.Color.White;
             this.layoutControlGroup1.AppearanceGroup.Options.UseBackColor = true;
             this.layoutControlGroup1.CustomizationFormText = "Root";
@@ -810,6 +956,9 @@
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(20, 20, 20, 20);
             this.layoutControlGroup1.Size = new System.Drawing.Size(1166, 617);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // opportunitiesGroup
+            // 
             this.opportunitiesGroup.BestFitWeight = 200;
             this.opportunitiesGroup.CustomizationFormText = "opportunitiesGroup";
             this.opportunitiesGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -821,6 +970,9 @@
             this.opportunitiesGroup.Size = new System.Drawing.Size(353, 577);
             this.opportunitiesGroup.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.opportunitiesGroup.TextVisible = false;
+            // 
+            // opportunitiesLayoutLCI
+            // 
             this.opportunitiesLayoutLCI.Control = this.opportunitiesLayoutControl;
             this.opportunitiesLayoutLCI.CustomizationFormText = "opportunitiesLayoutLCI";
             this.opportunitiesLayoutLCI.Location = new System.Drawing.Point(0, 0);
@@ -832,6 +984,9 @@
             this.opportunitiesLayoutLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.opportunitiesLayoutLCI.TextSize = new System.Drawing.Size(0, 0);
             this.opportunitiesLayoutLCI.TextVisible = false;
+            // 
+            // opportunitiesChartLCI
+            // 
             this.opportunitiesChartLCI.Control = this.opportunitiesChartControl;
             this.opportunitiesChartLCI.CustomizationFormText = "opportunitiesChartLCI";
             this.opportunitiesChartLCI.Location = new System.Drawing.Point(0, 56);
@@ -843,6 +998,9 @@
             this.opportunitiesChartLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.opportunitiesChartLCI.TextSize = new System.Drawing.Size(0, 0);
             this.opportunitiesChartLCI.TextVisible = false;
+            // 
+            // lgSalesGroup
+            // 
             this.lgSalesGroup.CustomizationFormText = "lgSalesGroup";
             this.lgSalesGroup.GroupBordersVisible = false;
             this.lgSalesGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
@@ -854,6 +1012,9 @@
             this.lgSalesGroup.Location = new System.Drawing.Point(0, 0);
             this.lgSalesGroup.Name = "lgSalesGroup";
             this.lgSalesGroup.Size = new System.Drawing.Size(763, 577);
+            // 
+            // emptySpaceItem3
+            // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
             this.emptySpaceItem3.Location = new System.Drawing.Point(373, 375);
@@ -863,6 +1024,9 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(10, 202);
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // revenuesGroup
+            // 
             this.revenuesGroup.CustomizationFormText = "revenuesGroup";
             this.revenuesGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.revenuesLayoutLCI,
@@ -873,6 +1037,9 @@
             this.revenuesGroup.Size = new System.Drawing.Size(373, 202);
             this.revenuesGroup.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.revenuesGroup.TextVisible = false;
+            // 
+            // revenuesLayoutLCI
+            // 
             this.revenuesLayoutLCI.Control = this.revenuesLayoutControl;
             this.revenuesLayoutLCI.CustomizationFormText = "revenuesLayoutLCI";
             this.revenuesLayoutLCI.Location = new System.Drawing.Point(0, 0);
@@ -884,6 +1051,9 @@
             this.revenuesLayoutLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.revenuesLayoutLCI.TextSize = new System.Drawing.Size(0, 0);
             this.revenuesLayoutLCI.TextVisible = false;
+            // 
+            // revenuesChartLCI
+            // 
             this.revenuesChartLCI.Control = this.revenuesChartControl;
             this.revenuesChartLCI.CustomizationFormText = "revenuesChartLCI";
             this.revenuesChartLCI.Location = new System.Drawing.Point(0, 56);
@@ -893,6 +1063,9 @@
             this.revenuesChartLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.revenuesChartLCI.TextSize = new System.Drawing.Size(0, 0);
             this.revenuesChartLCI.TextVisible = false;
+            // 
+            // costSoldGroup
+            // 
             this.costSoldGroup.CustomizationFormText = "costSoldGroup";
             this.costSoldGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.costLayoutLCI,
@@ -903,6 +1076,9 @@
             this.costSoldGroup.Size = new System.Drawing.Size(380, 202);
             this.costSoldGroup.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.costSoldGroup.TextVisible = false;
+            // 
+            // costLayoutLCI
+            // 
             this.costLayoutLCI.Control = this.costLayoutControl;
             this.costLayoutLCI.CustomizationFormText = "costLayoutLCI";
             this.costLayoutLCI.Location = new System.Drawing.Point(0, 0);
@@ -914,6 +1090,9 @@
             this.costLayoutLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.costLayoutLCI.TextSize = new System.Drawing.Size(0, 0);
             this.costLayoutLCI.TextVisible = false;
+            // 
+            // costChartLCI
+            // 
             this.costChartLCI.Control = this.costChartControl;
             this.costChartLCI.CustomizationFormText = "costChartLCI";
             this.costChartLCI.Location = new System.Drawing.Point(0, 56);
@@ -924,6 +1103,9 @@
             this.costChartLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.costChartLCI.TextSize = new System.Drawing.Size(0, 0);
             this.costChartLCI.TextVisible = false;
+            // 
+            // salesTodayGroup
+            // 
             this.salesTodayGroup.CustomizationFormText = "salesTodayGroup";
             this.salesTodayGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.salesTodayLayoutLCI});
@@ -933,6 +1115,9 @@
             this.salesTodayGroup.Size = new System.Drawing.Size(763, 365);
             this.salesTodayGroup.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.salesTodayGroup.TextVisible = false;
+            // 
+            // salesTodayLayoutLCI
+            // 
             this.salesTodayLayoutLCI.Control = this.salesLayoutControl;
             this.salesTodayLayoutLCI.CustomizationFormText = "salesTodayLayoutLCI";
             this.salesTodayLayoutLCI.Location = new System.Drawing.Point(0, 0);
@@ -943,6 +1128,9 @@
             this.salesTodayLayoutLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.salesTodayLayoutLCI.TextSize = new System.Drawing.Size(0, 0);
             this.salesTodayLayoutLCI.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 365);
@@ -952,6 +1140,9 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(763, 10);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem2
+            // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
             this.emptySpaceItem2.Location = new System.Drawing.Point(763, 0);
@@ -961,6 +1152,9 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(10, 577);
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // Dashboard
+            // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.Controls.Add(this.dataLayoutControl1);
@@ -976,7 +1170,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(funnelSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(funnelSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
@@ -986,7 +1179,6 @@
             this.opportunitiesLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opportunitiesLabelLCI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();

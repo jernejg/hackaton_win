@@ -4,7 +4,7 @@ namespace DevExpress.DevAV {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        //private System.ComponentModel.IContainer components = null;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -41,7 +41,6 @@ namespace DevExpress.DevAV {
             this.dashboardTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tasksTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.employeesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.tileBarGroup3 = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.productsTileBarDropDownContainter = new DevExpress.XtraBars.Navigation.TileBarDropDownContainer();
             this.productTileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup1 = new DevExpress.XtraBars.Navigation.TileBarGroup();
@@ -158,7 +157,6 @@ namespace DevExpress.DevAV {
             this.mainTileBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainTileBar.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
             this.mainTileBar.Groups.Add(this.tileBarGroup2);
-            this.mainTileBar.Groups.Add(this.tileBarGroup3);
             this.mainTileBar.Location = new System.Drawing.Point(0, 38);
             this.mainTileBar.MaxId = 7;
             this.mainTileBar.Name = "mainTileBar";
@@ -215,11 +213,6 @@ namespace DevExpress.DevAV {
             this.employeesTileBarItem.Id = 2;
             this.employeesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.employeesTileBarItem.Name = "employeesTileBarItem";
-            // 
-            // tileBarGroup3
-            // 
-            this.tileBarGroup3.Name = "tileBarGroup3";
-            this.tileBarGroup3.Text = "OPERATIONS";
             // 
             // productsTileBarDropDownContainter
             // 
@@ -540,7 +533,6 @@ namespace DevExpress.DevAV {
         private XtraBars.Navigation.TileBarItem dashboardTileBarItem;
         private XtraBars.Navigation.TileBarItem tasksTileBarItem;
         private XtraBars.Navigation.TileBarItem employeesTileBarItem;
-        private XtraBars.Navigation.TileBarGroup tileBarGroup3;
         private XtraBars.Navigation.TileBarDropDownContainer customTileBarDropDownContainter;
         private XtraBars.Navigation.TileBarDropDownContainer productsTileBarDropDownContainter;
         private XtraBars.Navigation.TileBarGroup tileBarGroup4;
