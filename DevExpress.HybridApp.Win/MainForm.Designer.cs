@@ -8,7 +8,6 @@ namespace DevExpress.DevAV {
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
 
         #region Windows Form Designer generated code
 
@@ -17,24 +16,19 @@ namespace DevExpress.DevAV {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::DevExpress.DevAV.SplashScreen1), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.Utils.Animation.Transition transition1 = new DevExpress.Utils.Animation.Transition();
             DevExpress.Utils.Animation.SlideFadeTransition slideFadeTransition1 = new DevExpress.Utils.Animation.SlideFadeTransition();
             this.modulesContainer = new DevExpress.XtraEditors.XtraUserControl();
@@ -48,7 +42,6 @@ namespace DevExpress.DevAV {
             this.tasksTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.employeesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarGroup3 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.productsTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.productsTileBarDropDownContainter = new DevExpress.XtraBars.Navigation.TileBarDropDownContainer();
             this.productTileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup1 = new DevExpress.XtraBars.Navigation.TileBarGroup();
@@ -56,7 +49,6 @@ namespace DevExpress.DevAV {
             this.plasmaTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.monitorTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.remouteControlTBI = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.customersTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.customTileBarDropDownContainter = new DevExpress.XtraBars.Navigation.TileBarDropDownContainer();
             this.customTileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroup4 = new DevExpress.XtraBars.Navigation.TileBarGroup();
@@ -64,12 +56,10 @@ namespace DevExpress.DevAV {
             this.customMyAccountTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.customJohnAccountTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.customTopStoresTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.salesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.opportunitiesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager();
             this.bottomPanelBase1 = new DevExpress.DevAV.Modules.BottomPanelBase();
             this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -140,7 +130,6 @@ namespace DevExpress.DevAV {
             this.navButtonHome.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.navButtonHome.Caption = null;
             this.navButtonHome.Enabled = false;
-            this.navButtonHome.Glyph = ((System.Drawing.Image)(resources.GetObject("navButtonHome.Glyph")));
             this.navButtonHome.Name = "navButtonHome";
             // 
             // navButtonHelp
@@ -229,26 +218,8 @@ namespace DevExpress.DevAV {
             // 
             // tileBarGroup3
             // 
-            this.tileBarGroup3.Items.Add(this.productsTileBarItem);
-            this.tileBarGroup3.Items.Add(this.customersTileBarItem);
-            this.tileBarGroup3.Items.Add(this.salesTileBarItem);
-            this.tileBarGroup3.Items.Add(this.opportunitiesTileBarItem);
             this.tileBarGroup3.Name = "tileBarGroup3";
             this.tileBarGroup3.Text = "OPERATIONS";
-            // 
-            // productsTileBarItem
-            // 
-            this.productsTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.productsTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
-            this.productsTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.productsTileBarItem.DropDownControl = this.productsTileBarDropDownContainter;
-            this.productsTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
-            tileItemElement8.Text = "Products";
-            this.productsTileBarItem.Elements.Add(tileItemElement8);
-            this.productsTileBarItem.Id = 3;
-            this.productsTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.productsTileBarItem.Name = "productsTileBarItem";
             // 
             // productsTileBarDropDownContainter
             // 
@@ -353,18 +324,6 @@ namespace DevExpress.DevAV {
             this.remouteControlTBI.Name = "remouteControlTBI";
             this.remouteControlTBI.Tag = DevExpress.DevAV.Modules.ProductCustomFilter.RemoteControl;
             // 
-            // customersTileBarItem
-            // 
-            this.customersTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.customersTileBarItem.DropDownControl = this.customTileBarDropDownContainter;
-            this.customersTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement13.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement13.Image")));
-            tileItemElement13.Text = "Customers";
-            this.customersTileBarItem.Elements.Add(tileItemElement13);
-            this.customersTileBarItem.Id = 4;
-            this.customersTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.customersTileBarItem.Name = "customersTileBarItem";
-            // 
             // customTileBarDropDownContainter
             // 
             this.customTileBarDropDownContainter.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
@@ -421,9 +380,9 @@ namespace DevExpress.DevAV {
             // AllStoresTBI
             // 
             this.AllStoresTBI.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement9.Text = "All Customers";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.AllStoresTBI.Elements.Add(tileItemElement9);
+            tileItemElement8.Text = "All Customers";
+            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.AllStoresTBI.Elements.Add(tileItemElement8);
             this.AllStoresTBI.Id = 3;
             this.AllStoresTBI.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.AllStoresTBI.Name = "AllStoresTBI";
@@ -433,9 +392,9 @@ namespace DevExpress.DevAV {
             // 
             this.customMyAccountTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.customMyAccountTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement10.Text = "My Accounts";
-            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.customMyAccountTileBarItem.Elements.Add(tileItemElement10);
+            tileItemElement9.Text = "My Accounts";
+            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.customMyAccountTileBarItem.Elements.Add(tileItemElement9);
             this.customMyAccountTileBarItem.Id = 0;
             this.customMyAccountTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customMyAccountTileBarItem.Name = "customMyAccountTileBarItem";
@@ -445,9 +404,9 @@ namespace DevExpress.DevAV {
             // 
             this.customJohnAccountTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.customJohnAccountTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement11.Text = "John\'s Accounts";
-            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.customJohnAccountTileBarItem.Elements.Add(tileItemElement11);
+            tileItemElement10.Text = "John\'s Accounts";
+            tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.customJohnAccountTileBarItem.Elements.Add(tileItemElement10);
             this.customJohnAccountTileBarItem.Id = 1;
             this.customJohnAccountTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customJohnAccountTileBarItem.Name = "customJohnAccountTileBarItem";
@@ -457,37 +416,13 @@ namespace DevExpress.DevAV {
             // 
             this.customTopStoresTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.customTopStoresTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement12.Text = "Top Stores";
-            tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.customTopStoresTileBarItem.Elements.Add(tileItemElement12);
+            tileItemElement11.Text = "Top Stores";
+            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.customTopStoresTileBarItem.Elements.Add(tileItemElement11);
             this.customTopStoresTileBarItem.Id = 2;
             this.customTopStoresTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customTopStoresTileBarItem.Name = "customTopStoresTileBarItem";
             this.customTopStoresTileBarItem.Tag = DevExpress.DevAV.Modules.CustomersFilter.TopStores;
-            // 
-            // salesTileBarItem
-            // 
-            this.salesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.salesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(112)))), ((int)(((byte)(56)))));
-            this.salesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.salesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement14.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement14.Image")));
-            tileItemElement14.Text = "Sales";
-            this.salesTileBarItem.Elements.Add(tileItemElement14);
-            this.salesTileBarItem.Id = 5;
-            this.salesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.salesTileBarItem.Name = "salesTileBarItem";
-            // 
-            // opportunitiesTileBarItem
-            // 
-            this.opportunitiesTileBarItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.opportunitiesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement15.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement15.Image")));
-            tileItemElement15.Text = "Opportunities";
-            this.opportunitiesTileBarItem.Elements.Add(tileItemElement15);
-            this.opportunitiesTileBarItem.Id = 6;
-            this.opportunitiesTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.opportunitiesTileBarItem.Name = "opportunitiesTileBarItem";
             // 
             // transitionManager1
             // 
@@ -606,10 +541,6 @@ namespace DevExpress.DevAV {
         private XtraBars.Navigation.TileBarItem tasksTileBarItem;
         private XtraBars.Navigation.TileBarItem employeesTileBarItem;
         private XtraBars.Navigation.TileBarGroup tileBarGroup3;
-        private XtraBars.Navigation.TileBarItem productsTileBarItem;
-        private XtraBars.Navigation.TileBarItem customersTileBarItem;
-        private XtraBars.Navigation.TileBarItem salesTileBarItem;
-        private XtraBars.Navigation.TileBarItem opportunitiesTileBarItem;
         private XtraBars.Navigation.TileBarDropDownContainer customTileBarDropDownContainter;
         private XtraBars.Navigation.TileBarDropDownContainer productsTileBarDropDownContainter;
         private XtraBars.Navigation.TileBarGroup tileBarGroup4;

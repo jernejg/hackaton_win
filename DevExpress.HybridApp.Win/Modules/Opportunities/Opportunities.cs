@@ -66,7 +66,7 @@ namespace DevExpress.DevAV.Modules {
             pivotGridControl.Visible = false;
             opportunitiesMapView1.Visible = true;
 
-            ///pivotGridLCI.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
+            //pivotGridLCI.Visibility = XtraLayout.Utils.LayoutVisibility.Never;
         }
         public void MakeGridVisible() {
             pivotGridControl.Visible = true;

@@ -131,12 +131,12 @@ namespace DevExpress.DevAV {
         void InitTileBar() {
             employeesTileBarItem.Tag = ModuleType.Employees;
             employeesTileBarItem.Tag = ModuleType.Employees;
-            customersTileBarItem.Tag = ModuleType.CustomersModule;
+            //customersTileBarItem.Tag = ModuleType.CustomersModule;
             tasksTileBarItem.Tag = ModuleType.Tasks;
-            productsTileBarItem.Tag = ModuleType.Products;
+            //productsTileBarItem.Tag = ModuleType.Products;
             dashboardTileBarItem.Tag = ModuleType.Dashboard;
-            salesTileBarItem.Tag = ModuleType.Sales;
-            opportunitiesTileBarItem.Tag = ModuleType.Opportunities;
+            //salesTileBarItem.Tag = ModuleType.Sales;
+            //opportunitiesTileBarItem.Tag = ModuleType.Opportunities;
         }
         bool transitionEffective = false;
         public void StartTransition(bool effective) {
