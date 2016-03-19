@@ -23,7 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
@@ -48,7 +47,7 @@
             this.tileItemProjectors = new DevExpress.XtraEditors.TileItem();
             this.tileItemAutomation = new DevExpress.XtraEditors.TileItem();
             this.gridProducts = new DevExpress.XtraGrid.GridControl();
-            this.productsSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsSource = new System.Windows.Forms.BindingSource();
             this.viewProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCost = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,6 +78,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.collapseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // layoutControl1
+            // 
             this.layoutControl1.AllowCustomization = false;
             this.layoutControl1.BackColor = System.Drawing.Color.White;
             this.layoutControl1.Controls.Add(this.tileControl);
@@ -91,6 +93,9 @@
             this.layoutControl1.Size = new System.Drawing.Size(1104, 582);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // tileControl
+            // 
             this.tileControl.AllowDrag = false;
             this.tileControl.AllowGlyphSkinning = true;
             this.tileControl.AllowSelectedItem = true;
@@ -126,6 +131,9 @@
             this.tileControl.TabIndex = 26;
             this.tileControl.Text = "tileControl";
             this.tileControl.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileControl_ItemClick);
+            // 
+            // tileGroup
+            // 
             this.tileGroup.Items.Add(this.tileItemAll);
             this.tileGroup.Items.Add(this.tileItemTelevisions);
             this.tileGroup.Items.Add(this.tileItemMonitors);
@@ -134,6 +142,9 @@
             this.tileGroup.Items.Add(this.tileItemAutomation);
             this.tileGroup.Name = "tileGroup";
             this.tileGroup.Text = null;
+            // 
+            // tileItemAll
+            // 
             tileItemElement1.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement1.Appearance.Normal.Options.UseFont = true;
@@ -142,13 +153,11 @@
             tileItemElement1.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement1.Appearance.Selected.Options.UseFont = true;
             tileItemElement1.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement1.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement1.Text = "5";
             tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement1.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement2.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement2.Image")));
             tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement2.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement2.Text = "All";
             tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemAll.Elements.Add(tileItemElement1);
@@ -157,6 +166,9 @@
             this.tileItemAll.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemAll.Name = "tileItemAll";
             this.tileItemAll.Tag = "!= null";
+            // 
+            // tileItemTelevisions
+            // 
             tileItemElement3.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement3.Appearance.Normal.Options.UseFont = true;
@@ -165,13 +177,11 @@
             tileItemElement3.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement3.Appearance.Selected.Options.UseFont = true;
             tileItemElement3.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement3.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement3.Text = "183";
             tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement3.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement4.Image")));
             tileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement4.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement4.Text = "TVs";
             tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemTelevisions.Elements.Add(tileItemElement3);
@@ -180,6 +190,9 @@
             this.tileItemTelevisions.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemTelevisions.Name = "tileItemTelevisions";
             this.tileItemTelevisions.Tag = "Televisions";
+            // 
+            // tileItemMonitors
+            // 
             tileItemElement5.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement5.Appearance.Normal.Options.UseFont = true;
@@ -188,13 +201,11 @@
             tileItemElement5.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement5.Appearance.Selected.Options.UseFont = true;
             tileItemElement5.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement5.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement5.Text = "5";
             tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement5.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement6.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement6.Image")));
             tileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement6.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement6.Text = "Monitors";
             tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemMonitors.Elements.Add(tileItemElement5);
@@ -203,6 +214,9 @@
             this.tileItemMonitors.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemMonitors.Name = "tileItemMonitors";
             this.tileItemMonitors.Tag = "Monitors";
+            // 
+            // tileItemVideoPlayers
+            // 
             tileItemElement7.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement7.Appearance.Normal.Options.UseFont = true;
@@ -211,13 +225,11 @@
             tileItemElement7.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement7.Appearance.Selected.Options.UseFont = true;
             tileItemElement7.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement7.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement7.Text = "5";
             tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement7.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement8.Image")));
             tileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement8.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement8.Text = "Video Players";
             tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemVideoPlayers.Elements.Add(tileItemElement7);
@@ -226,6 +238,9 @@
             this.tileItemVideoPlayers.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemVideoPlayers.Name = "tileItemVideoPlayers";
             this.tileItemVideoPlayers.Tag = "VideoPlayers";
+            // 
+            // tileItemProjectors
+            // 
             tileItemElement9.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement9.Appearance.Normal.Options.UseFont = true;
@@ -234,13 +249,11 @@
             tileItemElement9.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement9.Appearance.Selected.Options.UseFont = true;
             tileItemElement9.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement9.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement9.Text = "5";
             tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement9.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement10.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement10.Image")));
             tileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement10.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement10.Text = "Projectors";
             tileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemProjectors.Elements.Add(tileItemElement9);
@@ -249,6 +262,9 @@
             this.tileItemProjectors.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemProjectors.Name = "tileItemProjectors";
             this.tileItemProjectors.Tag = "Projectors";
+            // 
+            // tileItemAutomation
+            // 
             tileItemElement11.Appearance.Normal.FontSizeDelta = 128;
             tileItemElement11.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
             tileItemElement11.Appearance.Normal.Options.UseFont = true;
@@ -257,13 +273,11 @@
             tileItemElement11.Appearance.Selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(168)))), ((int)(((byte)(209)))));
             tileItemElement11.Appearance.Selected.Options.UseFont = true;
             tileItemElement11.Appearance.Selected.Options.UseForeColor = true;
-            tileItemElement11.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement11.Text = "5";
             tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
             tileItemElement11.TextLocation = new System.Drawing.Point(-2, -12);
             tileItemElement12.Image = ((System.Drawing.Image)(resources.GetObject("tileItemElement12.Image")));
             tileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement12.ImageBorderColor = System.Drawing.Color.Empty;
             tileItemElement12.Text = "Automation";
             tileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.tileItemAutomation.Elements.Add(tileItemElement11);
@@ -272,6 +286,9 @@
             this.tileItemAutomation.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItemAutomation.Name = "tileItemAutomation";
             this.tileItemAutomation.Tag = "Automation";
+            // 
+            // gridProducts
+            // 
             this.gridProducts.DataSource = this.productsSource;
             this.gridProducts.Location = new System.Drawing.Point(310, 53);
             this.gridProducts.MainView = this.viewProducts;
@@ -283,7 +300,13 @@
             this.gridProducts.TabIndex = 1;
             this.gridProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewProducts});
+            // 
+            // productsSource
+            // 
             this.productsSource.DataSource = typeof(DevExpress.DevAV.Product);
+            // 
+            // viewProducts
+            // 
             this.viewProducts.Appearance.FooterPanel.Options.UseTextOptions = true;
             this.viewProducts.Appearance.FooterPanel.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.viewProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -314,11 +337,17 @@
             this.viewProducts.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.viewProducts_RowClick);
             this.viewProducts.FocusedRowObjectChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventHandler(this.viewProducts_FocusedRowObjectChanged);
             this.viewProducts.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
+            // 
+            // colName
+            // 
             this.colName.FieldName = "Name";
             this.colName.Name = "colName";
             this.colName.Visible = true;
             this.colName.VisibleIndex = 0;
             this.colName.Width = 209;
+            // 
+            // colCost
+            // 
             this.colCost.Caption = "Cost";
             this.colCost.DisplayFormat.FormatString = "c";
             this.colCost.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -327,6 +356,9 @@
             this.colCost.Visible = true;
             this.colCost.VisibleIndex = 1;
             this.colCost.Width = 103;
+            // 
+            // colSalePrice
+            // 
             this.colSalePrice.Caption = "Sale Price";
             this.colSalePrice.DisplayFormat.FormatString = "c";
             this.colSalePrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -335,6 +367,9 @@
             this.colSalePrice.Visible = true;
             this.colSalePrice.VisibleIndex = 2;
             this.colSalePrice.Width = 103;
+            // 
+            // colRetailPrice
+            // 
             this.colRetailPrice.Caption = "Retail Price";
             this.colRetailPrice.DisplayFormat.FormatString = "c";
             this.colRetailPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -343,6 +378,9 @@
             this.colRetailPrice.Visible = true;
             this.colRetailPrice.VisibleIndex = 3;
             this.colRetailPrice.Width = 103;
+            // 
+            // colInventory
+            // 
             this.colInventory.Caption = "Inventory";
             this.colInventory.FieldName = "CurrentInventory";
             this.colInventory.Name = "colInventory";
@@ -351,12 +389,18 @@
             this.colInventory.Visible = true;
             this.colInventory.VisibleIndex = 4;
             this.colInventory.Width = 103;
+            // 
+            // colBackOrder
+            // 
             this.colBackOrder.Caption = "Backorder";
             this.colBackOrder.FieldName = "Backorder";
             this.colBackOrder.Name = "colBackOrder";
             this.colBackOrder.Visible = true;
             this.colBackOrder.VisibleIndex = 5;
             this.colBackOrder.Width = 103;
+            // 
+            // colMonthlySales
+            // 
             this.colMonthlySales.Caption = "Monthly Sales (FY2013)";
             this.colMonthlySales.ColumnEdit = this.repositoryItemSparklineEdit1;
             this.colMonthlySales.FieldName = "MonthlySales";
@@ -371,9 +415,15 @@
             this.colMonthlySales.Visible = true;
             this.colMonthlySales.VisibleIndex = 6;
             this.colMonthlySales.Width = 255;
+            // 
+            // repositoryItemSparklineEdit1
+            // 
             this.repositoryItemSparklineEdit1.Name = "repositoryItemSparklineEdit1";
             barSparklineView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(81)))), ((int)(((byte)(165)))));
             this.repositoryItemSparklineEdit1.View = barSparklineView1;
+            // 
+            // layoutControlGroup1
+            // 
             this.layoutControlGroup1.CustomizationFormText = "Root";
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
@@ -387,6 +437,9 @@
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
             this.layoutControlGroup1.Size = new System.Drawing.Size(1104, 582);
             this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
             this.layoutControlItem2.Control = this.gridProducts;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
             this.layoutControlItem2.Location = new System.Drawing.Point(268, 45);
@@ -395,6 +448,9 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(756, 537);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // tileControlLCI
+            // 
             this.tileControlLCI.Control = this.tileControl;
             this.tileControlLCI.CustomizationFormText = "tileControlLCI";
             this.tileControlLCI.Location = new System.Drawing.Point(0, 45);
@@ -406,6 +462,9 @@
             this.tileControlLCI.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.tileControlLCI.TextSize = new System.Drawing.Size(0, 0);
             this.tileControlLCI.TextVisible = false;
+            // 
+            // hideButton
+            // 
             this.hideButton.AllowHotTrack = false;
             this.hideButton.CustomizationFormText = " ";
             this.hideButton.Image = ((System.Drawing.Image)(resources.GetObject("hideButton.Image")));
@@ -418,6 +477,9 @@
             this.hideButton.Text = " ";
             this.hideButton.TextSize = new System.Drawing.Size(179, 25);
             this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
+            // 
+            // productsSLI
+            // 
             this.productsSLI.AllowHotTrack = false;
             this.productsSLI.AllowHtmlStringInCaption = true;
             this.productsSLI.AppearanceItemCaption.FontSizeDelta = 3;
@@ -431,6 +493,9 @@
             this.productsSLI.Size = new System.Drawing.Size(1024, 45);
             this.productsSLI.Text = "PRODUCT <color=47, 81, 165>Categories";
             this.productsSLI.TextSize = new System.Drawing.Size(179, 25);
+            // 
+            // collapseButton
+            // 
             this.collapseButton.AllowHotTrack = false;
             this.collapseButton.CustomizationFormText = " ";
             this.collapseButton.Location = new System.Drawing.Point(168, 34);
@@ -441,6 +506,9 @@
             this.collapseButton.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.collapseButton.Text = " ";
             this.collapseButton.TextSize = new System.Drawing.Size(73, 28);
+            // 
+            // simpleLabelItem2
+            // 
             this.simpleLabelItem2.AllowHotTrack = false;
             this.simpleLabelItem2.AppearanceItemCaption.FontSizeDelta = 5;
             this.simpleLabelItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(81)))), ((int)(((byte)(165)))));
@@ -453,6 +521,9 @@
             this.simpleLabelItem2.Size = new System.Drawing.Size(1044, 50);
             this.simpleLabelItem2.Text = "Categories";
             this.simpleLabelItem2.TextSize = new System.Drawing.Size(116, 30);
+            // 
+            // Products
+            // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);

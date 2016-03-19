@@ -30,20 +30,20 @@ namespace DevExpress.DevAV.Modules {
         }
         private void InitializeCostChartControl() {
             listCost = ViewModel.GetCostForDashboard();
-            costChartControl.Series[0].ArgumentDataMember = "Name";
-            costChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
+            //costChartControl.Series[0].ArgumentDataMember = "Name";
+            //costChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
             SetCostData(0);
         }
         private void InitializeRevenuesChartControl() {
             listSales = ViewModel.GetSalesForDashboard();
             SetRevenuesData(0);
-            revenuesChartControl.Series[0].ArgumentDataMember = "Name";
-            revenuesChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
+            //revenuesChartControl.Series[0].ArgumentDataMember = "Name";
+            //revenuesChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
         }
         private void InitializeOpportunitiesChartControl() {
-            opportunitiesChartControl.Series[0].DataSource = CreateViewModel<QuoteCollectionViewModel>().GetQuoteInfos();
-            opportunitiesChartControl.Series[0].ArgumentDataMember = "StageName";
-            opportunitiesChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Summary" });
+           // opportunitiesChartControl.Series[0].DataSource = CreateViewModel<QuoteCollectionViewModel>().GetQuoteInfos();
+          //  opportunitiesChartControl.Series[0].ArgumentDataMember = "StageName";
+          //  opportunitiesChartControl.Series[0].ValueDataMembers.AddRange(new string[] { "Summary" });
         }
         protected internal override void OnTransitionCompleted() {
             base.OnTransitionCompleted();
@@ -58,12 +58,12 @@ namespace DevExpress.DevAV.Modules {
             }
         }
         private void SetRevenuesData(Periods period) {
-            revenuesChartControl.Series[0].DataSource = listSales[(int)period].ListProductInfo;
-            revenuesChartControl.Refresh();
+            //revenuesChartControl.Series[0].DataSource = listSales[(int)period].ListProductInfo;
+            //revenuesChartControl.Refresh();
         }
         private void SetCostData(Periods period) {
-            costChartControl.Series[0].DataSource = listCost[(int)period].ListProductInfo;
-            costChartControl.Refresh();
+            //costChartControl.Series[0].DataSource = listCost[(int)period].ListProductInfo;
+            //costChartControl.Refresh();
         }
         private void todayRevenuesSimpleButton_Click(object sender, EventArgs e) {
             SetRevenuesData(Periods.Today);
